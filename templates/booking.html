@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Room | HotelEase</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <h2>Book Your Room</h2>
+
+  <form action="/confirm" method="POST" class="booking-form">
+    <input type="hidden" name="room_id" value="{{ room_id }}">
+    <label>Name:</label>
+    <input type="text" name="name" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Check-in:</label>
+    <input type="date" name="checkin" required>
+
+    <label>Check-out:</label>
+    <input type="date" name="checkout" required>
+
+    <button type="submit">Confirm Booking</button>
+  </form>
+</body>
+</html>
